@@ -1,8 +1,8 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
-### DATE OF EXPERIMENT 
+### NAME :LAAVANYA.R
+### DEPARTMENT :AI&DS
+### ROLL NO :212224230135
+### DATE OF EXPERIMENT :24-02-2025
 
 ### AIM
 To interface a digital output device (LED) with the Raspberry Pi Pico and control it using MicroPython.
@@ -41,25 +41,77 @@ Connect the cathode (shorter leg) of the LED to GND (ground).
 
 ## PROGRAM (MicroPython)
 ```
+from machine import Pin
+from utime import sleep
+print("Hello,Pi Pico!")
+led=Pin(0,Pin.OUT)
+while True:
+  led.toggle()
+  sleep(0.5)
+```
 
+```
+from machine import Pin
+from utime import sleep
+print("Hello,Pi Pico!")
+led=Pin(0,Pin.OUT)
+led1 = Pin (0,Pin.OUT)
+led2 = Pin(1,Pin.OUT)
+led3 = Pin(2,Pin.OUT)
+while True:
+    led1.toggle()
+    sleep(0.5)
+    led2.toggle()
+    sleep(0.5)
+    led3.toggle()
+    sleep(0.5)
+```
 
- 
+```
+from machine import Pin
+from utime import sleep
+print("Hello,Pi Pico!")
+led1 = Pin (0,Pin.OUT)
+led2 = Pin(1,Pin.OUT)
+led3 = Pin(2,Pin.OUT)
+buzz=Pin (3,Pin.OUT)
 
-
-
- 
-````
+while True:
+    led1.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+    led2.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+    led3.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+```
 
 ### OUPUT  
 
 
 # FIGURE -02 ADD TITILE HERE 
 
+
+![image](https://github.com/user-attachments/assets/31ba99de-0ee9-418f-ad80-51cd6d7ed929)
+
+
+
 #  FIGURE -03 ADD TITILE HERE 
+
+
+![image](https://github.com/user-attachments/assets/41051603-f304-4a75-847e-b6d3d49a38b7)
+
 
 # FIGURE -04 ADD TITLE HERE 
 
-
+![image](https://github.com/user-attachments/assets/3db6a932-d9f8-49ac-970a-cdc089b7f754)
  
 ## RESULTS
-The LED connected to the Raspberry Pi Pico successfully turns ON and OFF at  user defined time  confirming the proper interfacing of a digital output.
+
+The LED connec
+ted to the Raspberry Pi Pico successfully turns ON and OFF at  user defined time  confirming the proper interfacing of a digital output.
